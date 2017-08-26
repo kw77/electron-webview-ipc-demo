@@ -1,0 +1,24 @@
+<html>
+    <head>
+        <title>Remote Web Page</title>
+        <style type="text/css">
+            button { margin: 10px; }
+            #info {
+                margin: 10px;
+                border: 1px solid gray;
+                background-color: FFFFA5;
+                padding: 5px;
+            }
+        </style>
+    </head>
+    <body>
+        <div>This is the remote web page, running in the <span id="context">TBC CONTEXT</span>.</div>
+
+        <button id="send">Send to Electron</button>
+
+        <div>Messages from Electron Main process:</div>
+        <div id="info">WAITING</div>
+
+        <script src="index.js"></script>
+    </body>
+</html>

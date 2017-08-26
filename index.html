@@ -1,0 +1,31 @@
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Web View Test</title>
+    <style>
+      webview {
+        height: 100%;
+        width: 100%;
+      }
+    </style>
+  </head>
+  <body>
+
+  <!--
+  Set the webview to have a unique user agent string, this helps the server
+  understand the context of the page/app to send.
+
+  It can also be used by the main process to identify this webviews context to
+  send messages via ipc. The main process otherwise only has an array of all
+  webcontents contexts... including this page as well as the webview page. It can target the webview via its position in the webcontents array (unreliable), page
+  title (depdent on the foreign/remote web page configuraiton) or, as below, a custom
+  user agent string that is in our control.
+  )
+  -->
+  <webview id="mainwebview" src="http://localhost:8888" useragent="electron-webview" preload="./preload.js"></webview>
+
+  <script>
+    require('./renderer.js')
+  </script>
+
+</html>

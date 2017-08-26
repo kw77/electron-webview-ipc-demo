@@ -1,0 +1,15 @@
+{
+  "name": "electron-webview-ipc-demo",
+  "version": "1.0.0",
+  "description": "A sample Electron application demonstrating bidirectional webview ipc comms with the main process",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "repository": "https://github.com/kw77/electron-webview-ipc-demo",
+  "author": "KW",
+  "license": "CC0-1.0",
+  "devDependencies": {
+    "electron": "~1.6.2"
+  }
+}
